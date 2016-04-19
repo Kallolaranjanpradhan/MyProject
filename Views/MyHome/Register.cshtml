@@ -1,0 +1,85 @@
+﻿@model MyProject.Models.Registration
+
+@{
+    Layout = "~/Views/Shared/_Common.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <link rel="stylesheet" href="~/Content/Site.css" type="text/css" />
+</head>
+<body>
+
+    <center>
+        <div id="form-div" class="col-4 col-m-4">
+            @using (Html.BeginForm("RegisterSuccess", "MyHome", FormMethod.Post, new { id = "form", novalidate = "novalidate" }))
+            {
+                @Html.AntiForgeryToken()
+                @*<div>
+                        @Html.ValidationSummary(true, "Error!", new { @class = "text-danger" })
+                    </div>*@
+                
+                    <div class="heading col-12 col-m-12 col-md-12">
+                        <span id="personal" class=" details col-6 col-m-6">Registration Form</span>
+                    </div>
+                    <div class="hide-div">
+                        <div class="form-class">
+                            @Html.TextBoxFor(x => x.FirstName, new { id = "form-firstname", name = "firstname", @class = "box col-12 col-m-12", @placeholder = "First Name" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-class">
+                            @Html.TextBoxFor(x => x.LastName, new { id = "form-lastname", name = "lastname", @class = "box col-12 col-m-12", @placeholder = "Last Name" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-class">
+                            @Html.TextBoxFor(x => x.Mobile, new { id = "form-mobile", name = "mobile", @class = "box col-12 col-m-12", @placeholder = "Mobile No" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-class">
+                            @Html.TextBoxFor(x => x.Email, new { id = "form-firstemail", name = "firstemail", @class = "box col-12 col-m-12", @placeholder = "Email" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-class">
+                            @Html.TextBoxFor(x => x.ConfirmEmail, new { id = "form-secondemail", name = "secondemail", @class = "box col-12 col-m-12", @placeholder = "Confirm Email" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.ConfirmEmail, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-class">
+                            @Html.TextBoxFor(x => x.Password, new { type = "password", id = "form-firstpassword", name = "firstpassword", @class = "box col-12 col-m-12", @placeholder = "Password" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-class">
+                            @Html.TextBoxFor(x => x.ConfirmPassword, new { type = "password", id = "form-secondpassword", name = "secondpassword", @class = "box col-12 col-m-12", @placeholder = "Confirm Password" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div id="check-div" class="form-class">
+                            @Html.CheckBox("terms", new { id = "agree", required = "true" }) I am agree with the <a href="#" id="terms-condition" class="no-underline">Terms & Conditions.</a>
+                        </div>
+                        <div class="form-class">
+                            <input type="submit" value="Register" name="submit" id="form-submit" class="submit-btn" />
+                            <input type="reset" value="Cancel" class="submit-btn" />
+                        </div>
+
+                    </div>
+            }
+        </div>
+    </center>
+    @*<script src="~/Scripts/myjQuery.js"></script>*@
+</body>
+</html>

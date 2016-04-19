@@ -1,0 +1,141 @@
+﻿@{
+    Layout = "~/Views/Shared/_Common.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <link rel="stylesheet" href="~/Content/HomePage.css" type="text/css" />
+    </head>
+
+    <body>
+        <div id="main_div" class="col-12 col-m-12 content">
+            <div id="wellcome-div" class="main-inner-div">
+                <center>
+                    <h1>The simplest way to hire Trusted Services.</h1>
+                </center>
+            </div>
+
+            <div id="search" class="main-inner-div">
+                <span>I am looking for a</span>
+                <input type="text" placeholder="e.g. Electrician" />
+            </div>
+
+
+            @*<div id="myModal" class="modal hide fade">
+                <p class="center-element">Select Your City</p>
+                <div class="inline">
+                    <ul class="inline-list">
+                        <li><a href="#">Angul</a></li>
+                        <li><a href="#">Balangir</a></li>
+                        <li><a href="#">Balasore</a></li>
+                    </ul>
+                    <ul class="inline-list">
+                        <li><a href="#">Bhadrak</a></li>
+                        <li><a href="#">Bhubaneswar</a></li>
+                        <li><a href="#">Cuttack</a></li>
+                    </ul>
+                    <ul class="inline-list">
+                        <li><a href="#">Jajpur</a></li>
+                        <li><a href="#">Koraput</a></li>
+                        <li><a href="#">Puri</a></li>
+                    </ul>
+                    <ul class="inline-list">
+                        <li><a href="#">Sambalpur</a></li>
+                        <li><a href="#">Sonpur</a></li>
+                    </ul>
+                </div>
+            </div>*@
+
+        </div>
+        
+
+        <div id="content-div" class="col-12 col-m-12 content">
+            @using (Html.BeginForm())
+            {
+                <div id="form">
+                    <div id="service-header" class="head">
+                        <span class="col-3 col-m-3">Trending Services</span>
+                    </div>
+                    <br />
+                    <p>Our most popular services</p>
+                    <div id="service-list" class="col-12 col-m-12">
+                        <div id="1" class="service-inline">
+                            <a href="#">
+                                <img src="~/Images/AC.jpg" />
+                                <p class="img-descriptor">AC Installation & Repair</p>
+                            </a>
+
+                        </div>
+
+                        <div id="2" class="service-inline">
+                            <a href="#">
+                                <img src="~/Images/carpenter.jpg" />
+                                <p class="img-descriptor">Carpenter</p>
+                            </a>
+                        </div>
+
+                        <div id="3" class="service-inline">
+                            <a href="#">
+                                <img src="~/Images/electrician.jpg" />
+                                <p class="img-descriptor">Electrician</p>
+                            </a>
+                        </div>
+
+                        <div id="4" class="service-inline">
+                            <a href="#">
+                                <img src="~/Images/plumber.jpg" />
+                                <p class="img-descriptor">Plumber</p>
+                            </a>
+                        </div>
+
+                        <div id="5" class="service-inline">
+                            <a href="#">
+                                <img src="~/Images/astro.jpg" />
+                                <p class="img-descriptor">Astrologer</p>
+                            </a>
+                        </div>
+
+                        <div id="6" class="service-inline">
+                            <a href="#">
+                                <img src="~/Images/lawyer.jpg" />
+                                <p class="img-descriptor">Lawyer</p>
+                            </a>
+                        </div>
+
+                        <div id="5" class="service-inline">
+                            <a href="#">
+                                <img src="~/Images/carcleaning.jpg" />
+                                <p class="img-descriptor">Car Cleaning</p>
+                            </a>
+                        </div>
+
+                        <div id="8" class="service-inline">
+                            <a href="#">
+                                <img src="~/Images/mehendi_artist.jpg" />
+                                <p class="img-descriptor">Bridal Mehendi Artist</p>
+                            </a>
+                        </div>
+                    </div>                    
+                </div>
+                <div id="view-all-btn-div" class="col-12 col-m-12">
+                    <center>
+                        @Html.ActionLink("View All Services", "AllService", "MyHome", new { id = "view-all" })
+                    </center>
+                </div>
+            }
+
+        </div>
+
+        <div class="hide fade">
+            <div id="customer-header" class="head">
+                <span class="col-3 col-m-3">Customer's Feedback</span>
+            </div>
+            <div class="inline-customer"></div>
+            <div class="inline-customer"></div>
+            <div class="inline-customer"></div>
+            <div id="last-inline" class="inline-customer"></div>
+        </div>
+    </body>
+</html>

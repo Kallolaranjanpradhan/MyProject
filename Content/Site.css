@@ -1,0 +1,183 @@
+﻿/*body {
+    background-color: #f3f3f3;
+    padding-top: 60px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}*/
+
+/* Set padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 430px;
+}*/
+
+
+
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 500px)
+{
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px)
+{
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+body
+    {
+        padding-top: 47px;
+    }
+
+.heading
+	{
+        text-align: center;
+		font-family:Arial, Sans-Serif;
+        border: 1px solid #18bc9c;
+        background-color: #18bc9c;
+        color: white;
+        cursor: pointer;
+	}
+
+#form-div
+    {
+        margin: 4.5% 0%;
+        background-color: #fefefe;
+        text-align: center;
+        font-family:Arial, Helvetica, sans-serif;
+        box-shadow: 0px 5px  5px #888888;
+    }
+
+#form-div .box
+    {
+        margin-top: 6px;
+    }
+
+
+#login-form
+    {
+        margin: 33.2% 0%;
+    }
+
+.details
+    {
+        font-size: 26px;
+        /*border-bottom: solid 1px white;*/
+        padding-bottom: 1px;
+    }
+
+#login-head
+    {
+        font-size: 26px;
+    }
+
+.form-class
+    {
+        box-sizing: border-box;
+        padding: 1%;
+        /*margin: 1%;*/
+    }
+
+.box 
+    {
+        font-size: 120%;
+        /*margin-top: 5px;*/
+        padding: 2px;
+        max-width: 300px;
+    }
+
+#check-div
+    {
+        font-size: 120%;
+        text-indent: 2.5%;
+    }
+.submit-btn
+    {
+        width: 18%;
+        font-size: 125%;
+        color: white;
+        border-radius: 4px;
+        background-color: #18bc9c;
+        padding: 1%;
+        box-sizing: border-box;
+        border-style: none;
+    }
+
+#new-register div
+    {
+        font-size: 125%;
+        text-align: left;
+        margin-left: 15.6%;
+        
+    }
+
+#error-terms
+    {
+        display: none;
+    }
+
+input.invalid
+    {
+	    border: 2px solid red;
+    }
+
+.no-underline:hover
+    {
+        text-decoration: none;
+    }
+
+.login-box
+    {
+        margin-top: 2.5%;
+    }
+
+/*input.valid, textarea.valid
+    {
+	    border: 2px solid green;
+    }*/
+/*.hide-div
+    {
+        display: none;
+    }*/

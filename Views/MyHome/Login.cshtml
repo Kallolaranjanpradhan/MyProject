@@ -1,0 +1,65 @@
+﻿@model MyProject.Models.Login
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Common.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <link rel="stylesheet" href="~/Content/Site.css" type="text/css" />
+</head>
+<body>
+
+    <center>
+        <div id="form-div" class="col-4 col-m-4">
+            @using (Html.BeginForm("LoginSuccess", "MyHome", FormMethod.Post, new { id = "form", novalidate = "novalidate" }))
+            {
+                @Html.AntiForgeryToken()
+                @*<div>
+                        @Html.ValidationSummary(true, "Error!", new { @class = "text-danger" })
+                    </div>*@
+
+                <div id="login-form">
+                    <div class="heading col-12 col-m-12 col-md-12">
+                        <span id="login-head" class="details col-6 col-m-6">Login</span>
+                    </div>
+
+                    <div class="form-class login-box">
+                        @Html.TextBoxFor(x => x.UserID, new { id = "form-loginid", name = "loginid", @class = "box col-12 col-m-12", @placeholder = "UserId" })
+                        <br />
+                        @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-class login-box">
+                        @Html.TextBoxFor(x => x.Password, new { type = "password", id = "form-password", name = "password", @class = "box col-12 col-m-12", @placeholder = "Password" })
+                        <br />
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+
+                    @*<div class="form-class">
+                        @Html.ActionLink("Forgot Password?", "ResetPassword", "MyHome", new { @class = "no-underline" })
+                    </div>*@
+
+                    <div id="new-register" class="form-class">
+                        <div>
+                            @Html.ActionLink("Forgot Password?", "ResetPassword", "MyHome", new { @class = "no-underline" })
+                            <br />
+                            <span>New User?</span>
+                            @Html.ActionLink("Register", "Register", "MyHome", new { @class = "no-underline" })
+                        </div>
+                    </div>
+
+                    <div class="form-class">
+                        <input type="submit" value="Login" name="submit" id="btn-success" class="submit-btn" />
+                    </div>
+                </div>
+            }
+        </div>
+    </center>
+</body>
+</html>
+

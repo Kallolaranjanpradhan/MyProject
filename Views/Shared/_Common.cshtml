@@ -1,0 +1,81 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Service@Doorstep</title>
+        @*@Styles.Render("~/Content/css")*@
+        @Styles.Render("~/Content/mycss")
+    </head>
+    <body>
+        <div id="main-nav" class="navbar navbar-fixed-top col-12 col-m-12">
+            <div id="left-div" class="inline-nav navbar-collapse collapse col-4 col-m-4">
+                <span id="logo" class="nav-element">Logo</span>
+                <span id="app-name" class="nav-element">Service@Doorstep</span>
+            </div>
+                
+            <div id="menu-div" class="inline-nav navbar-collapse collapse col-4 col-m-4">
+                <ul class="nav nav-list">
+                    <li>@Html.ActionLink("Home", "Home", "MyHome", new { @class = "menu" })</li>
+                    <li>@Html.ActionLink("About", "About", "MyHome", new { @class = "menu" })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "MyHome", new { @class = "menu" })</li>
+                    <li>@Html.ActionLink("Services", "Services", "MyHome", new { @class = "menu" })</li>                
+                </ul>   
+            </div>
+            <div id="city-div" class="inline-nav">
+                <select id="select-city">
+                    <option>Select City</option>
+                    <option>Angul</option>
+                    <option>Balangir</option>
+                    <option>Balasore</option>
+                    <option>Bhadrak</option>
+                    <option>Bhubaneswar</option>
+                    <option>Cuttack</option>
+                    <option>Jajpur</option>
+                    <option>Koraput</option>
+                    <option>Puri</option>
+                    <option>Sambalpur</option>
+                    <option>Sonpur</option>
+                </select>
+            </div>
+            <div id="right-div" class="inline-nav navbar-collapse collapse">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default">Register</button>
+
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                        <span class="sr-only"></span>
+                    </button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" class="dropdown-menu-list">Customer</a></li>
+                        <li><a href="#" class="dropdown-menu-list">Agency</a></li>
+                        <li><a href="#" class="dropdown-menu-list">Professional</a></li>
+                    </ul>
+                </div>
+                @Html.ActionLink("Login", "Login", "MyHome", new { id = "login"})
+            </div>
+
+        </div>
+        <div class="body-content">
+            @RenderBody()
+
+            <footer>
+                <div id="left-footer">
+                    <span id="footer-app-name" class="">Service@Doorstep</span>
+                </div>
+            </footer>
+        </div>
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/bootstrap")
+    </body>
+</html>
