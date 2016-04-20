@@ -36,7 +36,7 @@ namespace MyProject.Controllers
         {
             if(ModelState.IsValid)
             {
-                return View("UserProfile");
+                return View("UserProfile",reg);
             }
             else
             {
